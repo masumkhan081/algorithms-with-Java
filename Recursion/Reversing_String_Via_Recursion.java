@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Masum Khan
  */
-public class Reversing_String {
+public class Reversing_String_Via_Recursion{
 
     public static void main(String[] args) {
 
