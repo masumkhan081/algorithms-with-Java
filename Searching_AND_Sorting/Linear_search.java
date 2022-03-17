@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Searching_And_Sorting;
-
 import java.util.Scanner;
-
 /**
  *
  * @author Masum Khan
  */
-public class Linear_search {
+public class Linear_search {  // Uploaded, bug fixed and commented: 18.03.22
 
     public static void main(String[] args) {
 
@@ -29,7 +22,7 @@ public class Linear_search {
             }
             //
             System.out.print("Key: ");
-            key = scn.nextInt();
+            key = scn.nextInt(); // the value 
             sign = false;
             for (i = 0; i < arr.length; i++) {
                 if (arr[i] == key) {
@@ -41,8 +34,16 @@ public class Linear_search {
             if (sign == false) {
                 System.out.println("No Such value");
             }
-
         }
-
     }
 }
+/*
+        CASE-1:
+7
+1 3  7 8 9 -2 0
+4
+        CASE-2:
+9
+1 3 1234 4 8 925 -2 0 7
+7
+*/
