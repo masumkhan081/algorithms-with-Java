@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Searching_And_Sorting;
-
 import java.util.Scanner;
-
 /**
  *
  * @author Masum Khan
  */
-public class Insertion_Sort {
+public class Insertion_Sort { // // Uploaded, bug fixed and commented: 18.03.22
 
     public static void main(String[] args) {
         int arr[] = new int[10000];
@@ -20,12 +13,12 @@ public class Insertion_Sort {
         Scanner scn = new Scanner(System.in);
         while (true) {
             System.out.print("How many elements: ");
-            number_of_elements = scn.nextInt();
+            number_of_elements = scn.nextInt(); // followed by array elements
             for (i = 0; i < number_of_elements; i++) {
-                arr[i] = scn.nextInt();
+                arr[i] = scn.nextInt();// takes input of space seperatted array elements
             }
             for (i = 1; i < number_of_elements; i++) {
-                pol = i;
+                pol = i; // index of the element which to be inserted at right position
                 for (k = i - 1; k >= 0; k--) {
                     if (arr[k] > arr[pol]) {
                         temp = arr[k];
@@ -42,12 +35,13 @@ public class Insertion_Sort {
         }
     }
 }
-
-/*
-                  FUCKING TEST CASES
+/* 
+        //  CASES-1  (Number of elements and elements)
 7 5 3 7 0 1 0 6
+        //  CASES-2
 7 3 5 0 1 0 6 7
+        //  CASES-3
 5 3 4 5 1 2
+        //  CASES-4
 5 5 4 3 1 2
-
  */
