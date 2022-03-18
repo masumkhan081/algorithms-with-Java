@@ -18,7 +18,7 @@ public class Selection_Sort { // Uploaded, bug fixed and commented: 18.03.22
                 arr[i] = scn.nextInt();
             }
             /*
-            i < number_of_elements - 1: because all smaller value get to it's position,
+            i < number_of_elements - 1: because when all other smaller value get to it's position,
             for sure the last one would be biggest among them
              */
             for (i = 0; i < number_of_elements - 1; i++) {
@@ -41,13 +41,9 @@ public class Selection_Sort { // Uploaded, bug fixed and commented: 18.03.22
         }
     }
 }
-/* 
-        CASES-1  (Num of values and values)
-7 5 3 7 0 1 0 6
-        CASES-2
-7 3 5 0 1 0 6 7
-        CASES-3
-5 3 4 5 1 2
-        CASES-4
-5 5 4 3 1 2
+/*                          (Num of values and values)
+CASES-1  7 5 3 7 0 1 0 6 
+CASES-2  7 3 5 0 1 0 6 7 
+CASES-3  5 3 4 5 1 2 
+CASES-4  5 5 4 3 1 2
  */
