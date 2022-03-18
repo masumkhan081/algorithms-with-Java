@@ -36,12 +36,13 @@ public class Insertion_Sort { // // Uploaded, bug fixed and commented: 18.03.22
     }
 }
 /* 
-        //  CASES-1  (Number of elements and elements)
+                   CASES-1  (Number of elements and elements)
 7 5 3 7 0 1 0 6
-        //  CASES-2
+                   CASES-2
 7 3 5 0 1 0 6 7
-        //  CASES-3
+                   CASES-3
 5 3 4 5 1 2
-        //  CASES-4
+                   CASES-4
 5 5 4 3 1 2
- */
+
+*/
