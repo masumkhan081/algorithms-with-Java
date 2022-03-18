@@ -1,27 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Searching_And_Sorting;
 
 /**
  *
  * @author Masum Khan
  */
-public class Merge_Sort {
+class Merge_Sort { // uploaded, bug checked : 18.03.22
 
     public static void main(String[] args) {
 
-        int arr[] = {6, 2, 3, 1, 9, 10, 15, 13, 12, 17};
+// Case-1:  {3,2};
+// Case-2:  {6, 2, 3, 1, 9, 10, 15, 13, 12, 17};
+// Case-3:  {2};
+// Case-3:  {38, 27, 43, 3, 9, 82, 10};
+//
+        int arr[] = {3,2};
 
-        merge_sort(arr, arr.length);
+        divide_and_merge(arr, arr.length);
+        System.out.println("Sorted as you would like!");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("_____ " + arr[i]);
+            System.out.println(" " + arr[i]);
         }
     }
 
-    static void merge_sort(int arr[], int len) {
+    static void divide_and_merge(int arr[], int len) {
         if (len < 2) {
             return;
         }
@@ -34,28 +35,28 @@ public class Merge_Sort {
         for (int i = mid; i < len; i++) {
             r[i - mid] = arr[i];
         }
-        merge_sort(l, mid);
-        merge_sort(r, len - mid);
+        divide_and_merge(l, mid);
+        divide_and_merge(r, len - mid);
         the_merger(arr, l, r, mid, len - mid);
     }
 
-    public static void the_merger(int[] arr, int[] arr_left, int[] arr_right, int left, int right) {
+    public static void the_merger(int[] arr, int[] left_part, int[] right_part, int len_left_part, int len_right_part) {
         int i = 0, j = 0, k = 0;
-        while (i < left && j < right) {
-            if (arr_left[i] <= arr_right[j]) {
 
-                arr[k++] = arr_left[i++];
+        while (i < len_left_part && j < len_right_part) {
+            if (left_part[i] <= right_part[j]) {
+
+                arr[k++] = left_part[i++];
 
             } else {
-                arr[k++] = arr_right[j++];
+                arr[k++] = right_part[j++];
             }
         }
-        while (i < left) {
-            arr[k++] = arr_left[i++];
+        while (i < len_left_part) {
+            arr[k++] = left_part[i++];
         }
-        while (j < right) {
-            arr[k++] = arr_right[j++];
+        while (j < len_right_part) {
+            arr[k++] = right_part[j++];
         }
     }
-
 }
