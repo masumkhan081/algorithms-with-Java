@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Searching_And_Sorting;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -12,7 +6,7 @@ import java.util.Scanner;
  *
  * @author Masum Khan
  */
-public class Bubble_Sort {
+class Bubble_Sort {
 
     public static void main(String[] args) {
 
@@ -20,7 +14,7 @@ public class Bubble_Sort {
         Scanner scn = new Scanner(System.in);
 
         while (true) {
-            System.out.print("\nnumber of elements: ");
+            System.out.print("Number of elements: ");
             num_of_elements = scn.nextInt();
 
             int arr[] = new int[num_of_elements];
@@ -43,7 +37,11 @@ public class Bubble_Sort {
                 System.out.print(arr[i] + ", ");
             }
             System.out.println("\n");
-
         }
     }
 }
+/*
+Case-1:    8 1 6 9 8 3 -1 0 1
+Case-2:    3 3 2 1
+Case-3:    1
+ */
