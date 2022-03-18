@@ -1,10 +1,9 @@
-package Searching_And_Sorting;
 import java.util.Scanner;
 /**
  *
  * @author Masum Khan
  */
-public class Selection_Sort { // Uploaded, bug fixed and commented: 18.03.22
+class Selection_Sort { // Uploaded, bug fixed and commented: 18.03.22
 
     public static void main(String[] args) {
         int pol, min, i, j, ind = 0, temp, number_of_elements;
