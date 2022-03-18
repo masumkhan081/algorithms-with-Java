@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Searching_And_Sorting;
-
 import java.util.Scanner;
-
 /**
  *
  * @author Masum Khan
  */
-public class Selection_Sort {
+public class Selection_Sort { // Uploaded, bug fixed and commented: 18.03.22
 
     public static void main(String[] args) {
         int pol, min, i, j, ind = 0, temp, number_of_elements;
@@ -24,7 +17,10 @@ public class Selection_Sort {
             for (i = 0; i < number_of_elements; i++) {
                 arr[i] = scn.nextInt();
             }
-
+            /*
+            i < number_of_elements - 1: because all smaller value get to it's position,
+            for sure the last one would be biggest among them
+             */
             for (i = 0; i < number_of_elements - 1; i++) {
                 min = arr[i];
                 ind = i;
@@ -40,8 +36,18 @@ public class Selection_Sort {
             }
             System.out.println("Fucked up Values Are: ");
             for (i = 0; i < number_of_elements; i++) {
-                System.out.println(" ____ " + arr[i]);
+                System.out.println(" ___ " + arr[i]);
             }
         }
     }
 }
+/* 
+        CASES-1  (Num of values and values)
+7 5 3 7 0 1 0 6
+        CASES-2
+7 3 5 0 1 0 6 7
+        CASES-3
+5 3 4 5 1 2
+        CASES-4
+5 5 4 3 1 2
+ */
