@@ -52,6 +52,7 @@ class Merge_Sort { // uploaded, bug checked : 18.03.22
                 arr[k++] = right_part[j++];
             }
         }
+        // it can happen that elements from either one of the arrays (not both at same time) is left to be merged, so ...
         while (i < len_left_part) {
             arr[k++] = left_part[i++];
         }
