@@ -1,10 +1,10 @@
-package Searching_And_Sorting;
+
 import java.util.Scanner;
 /**
  *
  * @author Masum Khan
  */
-public class Binary_Search { // Uploaded, bug fixed and commented: 17.03.22
+class Binary_Search { // Uploaded, bug fixed and commented: 17.03.22
 
     public static void main(String[] args) {
 
