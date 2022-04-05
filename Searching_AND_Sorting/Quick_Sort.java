@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Masum Khan
  */
-public class Quick_Sort { // uploaded in github at 5 April
+public class Quick_Sort { // uploaded in github at 5 April, 2022
 
     /*
     Following the geeksforgeeks youtube algorithm tutorial. there are multiple way partition can be done.
