@@ -1,37 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Recursion;
 
 /**
  *
  * @author Masum Khan
  */
-public class Indirect_Recursion {
+public class Indirect_Recursion {       // checked and revised at 09 April 22
 
-    static int n = 1;
-
+    /*
+    Problem is simply to print numbers 1 to 10 in a way that when number is odd, add 1 to it
+    and when even subtract 1 from it. 
+     */
     public static void main(String[] args) {
-
-        new Indirect_Recursion().odd();
+        odd(1);
     }
 
-    public void odd() {
+    static void odd(int n) {
         if (n <= 10) {
-            System.out.println(" __ " + (n + 1));
+            System.out.println("--> " + (n + 1));
             n++;
-            even();
+            even(n);  // odd func doesn't call itself but that happens indirectly via even function
         }
         return;
     }
 
-    public void even() {
+    static void even(int n) {
         if (n <= 10) {
-            System.out.println(" __ " + (n - 1));
+            System.out.println("--> " + (n - 1));
             n++;
-            odd();
+            odd(n);
         }
         return;
     }
