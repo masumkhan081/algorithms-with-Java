@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Recursion;
 
 /**
  *
  * @author Masum Khan
  */
-public class Non_Tail_Recursion_2 {
+public class Non_Tail_Recursion_2 {      // checked and revised at 09 April 22
 
     public static void main(String[] args) {
         int n = 8;
@@ -23,5 +18,4 @@ public class Non_Tail_Recursion_2 {
             return 1 + haha(n / 2);
         }
     }
-
 }
