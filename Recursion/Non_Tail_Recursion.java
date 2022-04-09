@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Recursion;
 
 /**
@@ -11,18 +6,16 @@ package Recursion;
  */
 public class Non_Tail_Recursion {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // checked and revised at 09 April 22
         int n = 3;
         haha(n);
     }
 
-    static int haha(int n) {
+    static void haha(int n) {
         if (n == 0) {
-            return 0;
+            return;
         }
-        haha(n - 1);
-        System.out.println(" __ " + n);
-
-        return 0;
+        haha(n - 1);  // this function call is not the last thing done by the function itself. 
+        System.out.println("--> " + n);  // here's something to be evaluated after recursive call.
     }
 }
