@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Recursion;
-
 import java.util.Scanner;
 
 /**
  *
  * @author Masum Khan
  */
-public class Factorial {
+public class Factorial {          // checked and revised at 11 April 22
 
     static int result;
 
@@ -19,7 +12,7 @@ public class Factorial {
         Scanner scn = new Scanner(System.in);
         while (true) {
             int n = scn.nextInt();
-            System.out.println("> " + factorial(n));
+            System.out.println("Factorial: " + factorial(n));
         }
     }
 
@@ -30,5 +23,4 @@ public class Factorial {
             return n * factorial(n - 1);
         }
     }
-
 }
