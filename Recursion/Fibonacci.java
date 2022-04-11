@@ -1,10 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Recursion;
-
 import java.util.Scanner;
 
 /**
@@ -13,16 +6,16 @@ import java.util.Scanner;
  */
 public class Fibonacci {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        // checked and revised at 11 April 22
         Scanner scn = new Scanner(System.in);
         while (true) {
-            System.out.println("n: ");
+            System.out.print("n:  ");
             int n = scn.nextInt();
-            System.out.println(n + " th Fibonacci number is: " + new Fibonacci().get_fibonacci(n));
+            System.out.println(n + "th Fibonacci number is: " + get_fibonacci(n));
         }
     }
 
-    int get_fibonacci(int n) {
+    static int get_fibonacci(int n) {
 
         if (n <= 1) {
             return n;
@@ -30,5 +23,4 @@ public class Fibonacci {
             return get_fibonacci(n - 1) + get_fibonacci(n - 2);
         }
     }
-
 }
