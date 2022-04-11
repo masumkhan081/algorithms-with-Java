@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Recursion;
-
 import java.util.Scanner;
 
 /**
  *
  * @author Masum Khan
  */
-public class GCD_By_Recursion {
+public class GCD_By_Recursion {        // checked and revised at 11 April 22
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -19,16 +13,14 @@ public class GCD_By_Recursion {
         int a = scn.nextInt();
         System.out.println("2nd number: ");
         int b = scn.nextInt();
-        int temp;
 
         if (a < b) {
-            a = a + b - (b = a);
+            a = a + b - (b = a);    // if a is smaller, swapping a and b
         }
-        int gcd = new GCD_By_Recursion().get_GCD(a, b);
-        System.out.println("Greatest : " + gcd);
+        System.out.println("Greatest Common Devisor: " + get_GCD(a, b));
     }
 
-    int get_GCD(int r1, int r2) {
+    static int get_GCD(int r1, int r2) {
         if (r2 == 0) {
             return r1;
         } else {
