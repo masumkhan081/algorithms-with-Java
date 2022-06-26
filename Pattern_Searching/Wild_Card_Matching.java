@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pattern_Matching;
 
 /**
  *
  * @author Masum Khan
  */
-public class Wild_Card_Matching {
+public class Wild_Card_Matching {   //  Dynamic Approach  //  Commented & Uploaded: 26.06.22
 
-    public static void main(String[] args) {   // study source:  https://youtu.be/3ZDZ-N0EPV0
+    public static void main(String[] args) {       // study source:  https://youtu.be/3ZDZ-N0EPV0
         String str_text = "xaylmz";
-//        String str_patt = "a*b";
-//        String str_patt = "a?b";
-        String str_patt = "x?y*z";
+        String str_patt = "x?y*z";      // ? - means any char, * -means 0 or more characters
+        //      str_patt = "a*b";
+//       str_patt = "a?b";
+
         //
         int len_patt = str_patt.length();
         int len_text = str_text.length();
@@ -50,14 +46,15 @@ public class Wild_Card_Matching {
         }
         if (arr[len_text][len_patt] == true) {
             System.out.println("Pattern Exist/Match !");
+        } else {
+            System.out.println("Pattern Doesn't Match !");
         }
+
         for (i = 0; i <= len_text; i++) {
             System.out.println("");
             for (j = 0; j <= len_patt; j++) {
                 System.out.print(arr[i][j] + "    ");
             }
         }
-
     }
-
 }
